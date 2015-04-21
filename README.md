@@ -17,6 +17,8 @@ $ npm install pebble-acl --save
 
 Initially, you have to populate your data source with Roles, Resources and HTTP verbs respectively. The adapters (currently, only `redis` is available) would take care of manipulation, referring to parent abstract adapter.
 
+## Population.
+
 ```javascript
     var acl = require('pebble-acl'),
         Adapter = acl.Adapter.RedisAdapter,
@@ -63,6 +65,28 @@ Initially, you have to populate your data source with Roles, Resources and HTTP 
                 });
             });
         });
+    });
+```
+
+## Permissions
+
+You could use the Permissions API to check for access across entities.
+
+```javascript
+    var acl = require('pebble-acl'),
+        Adapter = acl.Adapter.RedisAdapter,
+        Permission = acl.Permissions;
+        
+    var permissions = new Permissions(new Adapter));    // You could pass the argument of {} to adapter.
+    permissions.hasAccess('POST', {
+        role: 'admin',
+        resource: 'engineers'
+    }, function(err, ok) {
+        // ok === true
+    });
+    
+    permissions.all('admin', function(err, access) {
+        // access carries key as resource and values as allowed methods.
     });
 ```
 
