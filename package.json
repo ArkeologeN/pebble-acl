@@ -1,0 +1,36 @@
+{
+  "name": "pebble-acl",
+  "version": "0.1.0",
+  "description": "Access Controller designed to be plugged on top of meanjs framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArkeologeN/pebble-acl.git"
+  },
+  "keywords": [
+    "acl",
+    "access",
+    "private",
+    "controllist",
+    "mean",
+    "meanjs",
+    "node",
+    "permissions",
+    "rbac"
+  ],
+  "author": "Hamza Waqas <hamzawaqas.programmer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArkeologeN/pebble-acl/issues"
+  },
+  "homepage": "https://github.com/ArkeologeN/pebble-acl",
+  "dependencies": {
+    "chai": "^2.2.0",
+    "hiredis": "^0.3.0",
+    "klass": "^1.4.0",
+    "redis": "^0.12.1"
+  }
+}
