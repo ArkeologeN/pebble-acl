@@ -34,11 +34,24 @@ describe('#core', function () {
                        resource: 'engineers'
                    }, function(err, ok) {
                        expect(err).to.be.null;
-                       console.log(ok);
                        done();
                    });
                });
-           }) 
+           });
+           
+           describe('#all', function() {
+               
+               it('should exists', function() {
+                   expect(permissions.all).to.be.an.instanceOf(Function);
+               });
+               
+               it('should return all permissions against role', function(done) {
+                   permissions.all('admin', function(err, access) {
+                       expect(err).to.be.null;
+                       done();
+                   });
+               });
+           })
         });
     });
     
