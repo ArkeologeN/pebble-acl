@@ -87,7 +87,8 @@ describe('#lib', function() {
                 });
             });
             
-            describe('method: clear', function() {
+            // Only enable when reseting.
+            describe.skip('method: clear', function() {
                 this.timeout(20000);
                 it('should exists', function() {
                     expect(builder.clear).to.be.ok;
