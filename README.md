@@ -90,10 +90,6 @@ You could use the Permissions API to check for access across entities.
     });
 ```
 
-# Contributors
-
-- [Hamza Waqas](http://twitter.com/HamzaWaqas)
-- [Azfar Ali](http://github.com/mideveloper)
 
 # License
 
